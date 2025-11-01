@@ -33,12 +33,20 @@ It also demonstrates the use of **Spring AOP (Aspect-Oriented Programming)** to 
 ```
 src/
  └── main/
-      ├── java/com/example/JobApp/
-      │     ├── controller/JobController.java
-      │     ├── model/Job.java
-      │     ├── service/JobService.java
-      │     ├── repository/JobRepository.java
-      │     └── aspect/LoggingAspect.java
+      ├── java/com/example/spring/jpa/
+      │     ├── aop/
+      │     │     ├── LoggingAspect.java
+      │     │     ├── PerformanceMonitorAspect.java
+      │     │     └── ValidationAspect.java
+      │     ├── controller/
+      │     │     └── JobController.java
+      │     ├── model/
+      │     │     └── Job.java
+      │     ├── repository/
+      │     │     └── JobRepository.java
+      │     ├── service/
+      │     │     └── JobService.java
+      │     └── SpringJpaApplication.java
       └── resources/
             ├── application.properties
             └── data.sql (optional - sample data)
@@ -66,7 +74,7 @@ src/
 {
   "id": 1,
   "jname": "Software Engineer",
-  "desc": "Develop backend APIs using Spring Boot",
+  "jdesc": "Develop backend APIs using Spring Boot",
   "jreq": ["Java", "Spring Boot", "PostgreSQL"]
 }
 ```
@@ -77,13 +85,13 @@ src/
   {
     "id": 1,
     "jname": "Backend Developer",
-    "desc": "Work on REST APIs",
+    "jdesc": "Work on REST APIs",
     "jreq": ["Java", "Spring Boot"]
   },
   {
     "id": 2,
     "jname": "Frontend Developer",
-    "desc": "Develop UI in React",
+    "jdesc": "Develop UI in React",
     "jreq": ["JavaScript", "React"]
   }
 ]
